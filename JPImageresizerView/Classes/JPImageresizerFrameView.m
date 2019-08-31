@@ -1213,7 +1213,7 @@ typedef NS_ENUM(NSUInteger, JPLinePosition) {
     
     self.superview.userInteractionEnabled = NO;
     [self hideOrShowBlurEffect:NO animateDuration:duration];
-    [self hideOrShowFrameLine:NO animateDuration:duration];
+    [self hideOrShowFrameLine:YES animateDuration:duration];
     [self updateImageresizerFrame:adjustResizeFrame animateDuration:duration];
     if (duration > 0) {
         [UIView animateWithDuration:duration delay:0 options:_animationOption animations:^{
@@ -1301,7 +1301,7 @@ typedef NS_ENUM(NSUInteger, JPLinePosition) {
     self.isPrepareToScale = YES;
     [self removeTimer];
     [self hideOrShowBlurEffect:YES animateDuration:_defaultDuration];
-    [self hideOrShowFrameLine:YES animateDuration:_defaultDuration];
+    [self hideOrShowFrameLine:NO animateDuration:_defaultDuration];
 }
 
 - (void)endedImageresizer {
